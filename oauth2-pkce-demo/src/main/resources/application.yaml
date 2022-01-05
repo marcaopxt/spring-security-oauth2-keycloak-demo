@@ -1,0 +1,13 @@
+server:
+  port: 8682
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8581/auth/realms/oauth2-demo-realm/protocol/openid-connect/certs
+
+logging.level:
+  org.springframework.security: TRACE
+  org.springframework.web: DEBUG
